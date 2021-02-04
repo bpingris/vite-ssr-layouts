@@ -3,10 +3,17 @@
 Small changes to be able to use more or less the same layout system as in Nuxt.
 Based on [vite-ssr-vue](https://github.com/vitejs/vite/tree/main/packages/playground/ssr-vue).
 
+## Install
+```js
+const layouts = await createLayouts()
+app.use(layouts)
+  ```
+#### TODO
+
 ## How to use?
 
-Add a `meta` property to your Vue component that are being used as a page (in the `pages/` directory).
-In this meta property, add a sub-property called `layout`, it will use this component as the wrapper of your page.
+Add a `layout` property to your Vue component that are being used as a page (in the `pages/` directory).
+In this property, add the name of the layout you want to use.
 
 *Don't forget to register this component under the name you gave in your `layout`.*
 
@@ -17,9 +24,7 @@ In this meta property, add a sub-property called `layout`, it will use this comp
 
 <script>
 export default {
-  meta: {
-    layout: 'default'
-  },
+  layout: 'default', // <default> <current-page /> </default>
   setup() {
     //...
   }

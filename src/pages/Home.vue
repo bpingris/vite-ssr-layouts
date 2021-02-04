@@ -20,7 +20,7 @@
 import { reactive } from "vue";
 
 export default {
-  meta: { layout: "default" },
+  layout: "default",
   setup() {
     const state = reactive({ count: 0 });
     return {

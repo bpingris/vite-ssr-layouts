@@ -5,7 +5,6 @@ export async function render(url, manifest) {
   const { app, router } = await createApp();
 
   // set the router to the desired URL before rendering
-  console.log(url);
   router.push(url);
   await router.isReady();
 
