@@ -1,13 +1,14 @@
 # Vite SSR layouts
 
-Small changes to be able to use more or less the same layouts system as in Nuxt
+Small changes to be able to use more or less the same layout system as in Nuxt.
+Based on [vite-ssr-vue](https://github.com/vitejs/vite/tree/main/packages/playground/ssr-vue).
 
-## How to use
+## How to use?
 
-Add a `meta` property to your Vue component that are being used as a page (in the `/pages` directory).
+Add a `meta` property to your Vue component that are being used as a page (in the `pages/` directory).
 In this meta property, add a sub-property called `layout`, it will use this component as the wrapper of your page.
 
-Don't forget to register this component under the name you gave in your `layout`.
+*Don't forget to register this component under the name you gave in your `layout`.*
 
 ```html
 <template>
@@ -26,7 +27,7 @@ export default {
 </script>
 ```
 
-Create a `/layouts` directory, put your layouts in there
+Create a `layouts/` directory, put your layouts in there
 
 ex:
 ```html
@@ -41,7 +42,6 @@ ex:
 </script>
 ```
 
-
 Setup your layouts at the root of your Vue application (`App.vue`).
 
 ```html
@@ -55,6 +55,7 @@ Setup your layouts at the root of your Vue application (`App.vue`).
 import Default from './layouts/Default.vue'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+
 export default {
   components: {
     Default
