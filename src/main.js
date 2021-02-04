@@ -3,9 +3,9 @@ import { createSSRApp } from "vue";
 import { createRouter } from "./router";
 import "./index.css";
 
-export function createApp() {
+export async function createApp() {
   const app = createSSRApp(App);
-  const router = createRouter();
+  const router = await createRouter();
   app.use(router);
   return { app, router };
 }

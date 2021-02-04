@@ -46,9 +46,9 @@ async function createServer(
     );
   }
 
-  // Find a way to hot reload new API routes
+  // Find a way to hot reload API routes
   app.get("/api", (_, res) => {
-    res.json({ cool: "api" });
+    res.json({ "so cool": "much wow" });
   });
 
   app.use("*", async (req, res) => {
